@@ -7,6 +7,16 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/style.css">
+<script src="js/main.js"></script>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
+ 
+  
+  <script type="text/javascript">
+    $(document).ready(function() {
+        $(".playlist").playlist();
+    });
+  </script>
 
 </head>
 <body>
@@ -15,7 +25,51 @@
 	</header>
 	<div class="wrap">
 		<div class="primaria">
-			<h1>Esta es una prueba</h1>
+			
+        <h1>Simple Playlist </h1>
+  
+  <ul class="playlist">
+    <li>
+      <div class="track">
+        <span class="controls" id="playToggle"></span>
+        <span class="title">Flu Gi — Mum</span>
+        <span class="minus">-</span>
+        <span id="timeleft">3:17</span>
+      </div>
+      <audio>
+        <source src="audio/mum.mp3" type="audio/mp3" />
+        <source src="audio/mum.ogg" type="audio/ogg" />
+        Your browser does not support the <code>audio</code> element.
+      </audio>
+    </li>
+    <li>
+      <div class="track">
+        <span class="controls" id="playToggle"></span>
+        <span class="title">Flu Gi — Speed</span>
+        <span class="minus">-</span>
+        <span id="timeleft">2:35</span>
+      </div>
+      <audio>
+        <source src="audio/speed.mp3" type="audio/mp3" />
+        <source src="audio/speed.ogg" type="audio/ogg" />
+        Your browser does not support the <code>audio</code> element.
+      </audio>
+    </li>
+    <li>
+      <div class="track">
+        <span class="controls" id="playToggle"></span>
+        <span class="title">Flu Gi — TOP90 (radio)</span>
+        <span class="minus">-</span>
+        <span id="timeleft">2:50</span>
+      </div>
+      <audio>
+        <source src="audio/top90(radio).mp3" type="audio/mp3" />
+        <source src="audio/top90(radio).ogg" type="audio/ogg" />
+        Your browser does not support the <code>audio</code> element.
+      </audio>
+    </li>
+  </ul>
+  
 		</div>
 		<div class="secundaria">
 			<section>
