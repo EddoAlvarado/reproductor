@@ -1,107 +1,221 @@
 *{
-	margin: 2;
-	padding: 1;
+	margin: 0;
+	padding: 0;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing:border-box;
 	box-sizing: border-box;
-	background: #15a863;
+	
 }
 
 body{
 	background: #fafafa;
 	font-size: 16px;
-	font-family: 'Lobster', cursive;
+	font-family: 'Lobster';
 }
 
- .primaria{
+.wrap{
+	background: #15a863;
+	overflow: hidden;
+	display: inline-block;
+	width: 100%;
+	height: auto;
+}
+
+.primaria{
 	position: relative;
 	margin: 2px;
 	padding: 2px;
-	float: center;
 	border-color: #2E2E2E;
 	display: inline-block;
 	width: 90%;
-	max-width: 15%;
-  height: 270%;
-	box-shadow: 1px 1px 1px #848484;
+	max-width: 20%;
+	box-shadow: 1px 2px #848484;
 	background: #ddd;
+	overflow:hidden;
+	float: left;
 
 }
 
 .secundaria{
 	position: relative;
 	margin: 2px;
+	padding-top: 20px;
 	padding: 2px;
-	float: center;
 	border-color: #2E2E2E;
 	display: inline-block;
 	width: 90%;
-	max-width: 60%;
-	box-shadow: 1px 1px 1px #848484;
+	max-width: 50%;
+	box-shadow: 1px 2px #848484;
+	overflow:hidden;
+	float: left;
 }
 
 .terciaria{
 	position: relative;
 	margin: 2px;
 	padding: 2px;
-	float: center;
 	border-color: #2E2E2E;
-	display: inline-block;
+	width: 100%;
+	max-width: 25%;
+	box-shadow: 1px 2px #848484;
+	overflow:hidden;
+	float: left;
+}
+
+/*para el reproductor*/
+div .rep{
 	width: 90%;
-	max-width: 15%;
-	box-shadow: 1px 1px 1px #848484;
+	margin: auto;
+	padding: 10px 20px;
+	overflow: hidden;
 }
-
-.header1{
-  position: relative;
-  margin: 2px;
-  padding: 2px;
- float: left;
-  border-color: #2E2E2E;
-  display: inline-block;
-  width: 60%;
-   height: 50px;
-  max-width: 20%;
-  max-height: 12%;
-   box-shadow: 1px 1px 1px #848484;
-}
-
-.header2{
-  position: relative;
-  margin: 2px;
-  padding: 2px;
-  float: center;
-  border-color: #2E2E2E;
-  display: inline-block;
-  width: 60%;
-  height: 50px;
-  max-width: 20%;
-  max-height: 12%;
-  box-shadow: 1px 1px 1px #848484;
-}
-
-.header3{
-  position: relative;
-  margin: 2px;
-  padding: 2px;
-  float: right;
-  border-color: #2E2E2E;
-  display: inline-block;
-  width: 60%;
-  height: 50px;
-  max-width: 20%;
-  max-height: 12%;
-  box-shadow: 1px 1px 1px #848484;
-}
-
-
-
 
 .video{
 	width: 100%;
 	height: 600px;
 }
+/*fin de para el reproductor*/
 
+/*Para el Menú*/
+header{
+	width: 100%;
+	overflow: hidden;
+	box-shadow: 2px 2px 5px #000;
+	background: #252932;
+}
+
+.wrapper{
+	width: 90%;
+	max-width: 1000px;
+	margin: auto;
+	overflow: hidden;
+}
+
+header .logo{
+	color: #f2f2f2;
+	font-size: 25px;
+	line-height: 50px;
+	float: left;
+}
+
+header nav{
+	float: right;
+	line-height: 50px;
+}
+
+header nav a{
+	display: inline-block;
+	color:#fff;
+	text-decoration: none;
+	padding:10px 20px;
+	line-height: normal;
+	font-size: 15px;
+	font-weight: bold;
+	-webkit-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	transition:all 500ms ease ;
+
+}
+
+header nav a:hover{
+	background: #15a863;
+	border-radius: 50px;
+}
+
+.header2{
+	position: fixed;
+	height: 50px;
+}
+
+.header2 .logo{
+	line-height: 50px;
+	font-size: 20px;
+}
+
+.header2 nav{
+	line-height: 50px;
+}
+/*Fin del css para el Menú*/
+
+/*para el slider publicidad*/
+.publicidad{
+	width: 95%;
+	margin: auto;
+	overflow: hidden;
+}
+
+.publicidad ul{
+	display: flex;
+	padding:1px;
+	width: 300%;
+	height: 225px;
+
+	animation: cambio 20s infinite;
+	animation-direction: alternate;
+	animation-timing-function: ease;
+
+}
+
+.publicidad li{
+	width: 100%;
+	list-style:none;
+}
+
+.publicidad img{
+	width: 100%;
+	height: 200px;
+	
+}
+
+@keyframes cambio{
+	0% { margin-left: 0; }
+	20% { margin-left: 0; }
+
+	25% {margin-left: -100%; }
+	45% {margin-left: -100%; }
+
+	50% {margin-left: -200%; }
+	70% {margin-left: -200%; }
+}
+/*fin de slider publicidad*/
+
+/*Barra de redes sociales*/
+.social{
+	position: fixed;
+	right: 0;
+	top:250px;
+	z-index: 50%;
+}
+
+.social ul{
+	list-style: none;
+}
+
+.social ul li a{
+	display: inline-block;
+	color:#fff;
+	background: #252932;
+	padding:10px 15px; 
+	text-decoration: none;
+	border-radius: 20%;
+}
+
+.social ul li .icon-facebook:hover{background: #3b5998;}
+.social ul li .icon-twitter:hover{background:#00abf0;}
+.social ul li .icon-instagram:hover{background:#e4405f ;}
+.social ul li .icon-youtube:hover{background:#cd201f ;}
+.social ul li .icon-spotify:hover{background:#1db954 ;}
+
+.social ul li a:hover{
+	padding-left: 40px;
+	padding-top:15px;
+	padding-bottom:15px;
+	border-radius: 1%;
+	-webkit-transition:all 400ms ease;
+	-o-transition:all 400ms ease;
+	transition:all 400ms ease ;
+}
+/*fin de barra de redes sociales*/
 ul.playlist {
   height: 305px;
   padding: 10px;
@@ -181,3 +295,72 @@ div.progress {
   border-radius: 3px;
   background: #22ccff;
 }
+
+/*Para cuando cambie la resolución de la pantalla*/
+@media screen and (max-width: 800px){
+	/*Maquetado*/
+	.primaria{
+		max-width: 30%;
+	}
+
+	.secundaria{
+		max-width: 65%;
+	}
+
+	.terciaria{
+		display: block;
+		margin: auto;
+		width: 100%;
+		max-width: 60%;
+	}
+
+	/*Menú principal*/
+	header .logo,
+	header nav{
+		width: 100%;
+		text-align: center;
+		line-height: 40px;
+
+	}
+
+	header .logo{
+		font-size: 1em;
+	}
+	header nav a {
+		font-size: 10px;
+	}
+
+	.header2{
+		height: auto;
+	}
+
+	.header2 .logo,
+	.header2 nav{
+		line-height: 20px;
+	}
+
+	.header2 .logo{
+		font-size: 10px;
+	}
+	.header nav a {
+		font-size: 4px;
+	}
+
+	/*Reproductor*/
+	.video{
+		width: 100%;
+		height: 300px;
+	}
+
+	/*menu de redes sociales*/
+	.social{
+		position: fixed;
+		right: 0;
+		top:200px;
+		z-index: 50%;
+	}
+	.social ul li a{
+		padding:5px 10px;
+	}
+	
+}/*fin de para cuando cambie la resolucion de pantalla*/
